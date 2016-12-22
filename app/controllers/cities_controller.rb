@@ -3,7 +3,8 @@ class CitiesController < ApplicationController
 
 
   def index
-   @cities = SeekingMatview.connection.select_all("Select city_id, city from seeking_matview").to_hash
+   #@cities = SeekingMatview.connection.select_all("Select city_id, city from seeking_matview").to_hash
+    @cities = City.all
     respond_to do |format|
      format.html {}
      format.json { render json: @cities }
