@@ -11,3 +11,4 @@
 /log/*
 !/log/.keep
 /tmp
+/db/migrate/20161203174756_add_post_new_index.rb
