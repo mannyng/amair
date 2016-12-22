@@ -1,0 +1,41 @@
+<header>
+<h1 class="h2">Search Postings</h1>
+</header>
+
+<section class="search-form">
+
+<%= form_for :customers_seeking_posts, method: :get do |f| %>
+
+<div class="input-group input-group-lg">
+<%= label_tag :category, nil, class: "sr-only" %>
+<%= text_field_tag :category, nil, placeholder: "Category", class: "form-control input-lg" %>
+<%= label_tag :location, nil, class: "sr-only" %>
+<%= text_field_tag :location, nil, placeholder: "Location", class: "form-control input-lg" %>
+
+<%= label_tag :keywords, nil, class: "sr-only" %>
+<%= text_field_tag :keywords, nil, placeholder: "Search Words", class: "form-control input-lg" %>
+<span class="pull-right">
+<%= submit_tag "Search Postings", class: "btn btn-primary btn-lg" %>
+</span>
+</div>
+<% end %>
+</section>
+
+<section class="search-results">
+<header>
+<h1 class="h3">Results</h1>
+</header>
+
+<%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+    <ol class="list-group">
+       <% @customers_seeking_posts.each do |post| %>
+        <li class="list-group-item clearfix">
+          <h2 class="h3"><%= post.category %> <%= post.content %> <small><%= post.city %></small></h2>
+          <h4><%= post.title %></h4>
+        </li>
+       <% end %>
+    </ol>
+<%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+</section>
+
+

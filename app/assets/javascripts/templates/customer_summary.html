@@ -1,0 +1,12 @@
+<div class="clearfix">
+
+<customer-summary cust="customer" view-details-function="viewDetails">
+</customer-summary>
+
+<div class="pull-right" ng-if="viewDetailsFunction">
+<button class="btn btn-small btn-primary" ng-click="viewDetailsFunction(cust)">
+View Details...
+</button>
+</div>
+
+</div>

@@ -1,0 +1,22 @@
+#cards {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url(https://ads.mediaforge.com/advertisers/chase/rias/ria2862107/images/cards.png);
+    background-size: 728px;
+   width: 728px;
+    height: 180px;
+}
+
+#ad {
+    background-image: url(https://ads.mediaforge.com/advertisers/chase/rias/ria2862107/images/728x90.jpg);
+    background-size: 728px;
+    cursor: pointer;
+    cursor: hand;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    width: 728px;
+    height: 70px;
+}
