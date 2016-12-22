@@ -1,8 +1,11 @@
 class AlterSeekingMatview < ActiveRecord::Migration[5.0]
+
   def change
+
      execute %{
-       DROP MATERIALIZED VIEW seeking_matview IF EXISTS;
+       DROP MATERIALIZED VIEW seeking_matview
      }
+
      execute <<-SQL
       CREATE MATERIALIZED VIEW seeking_matview AS
         SELECT
