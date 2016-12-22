@@ -3,7 +3,7 @@ class EnglishUnaccented < ActiveRecord::Migration[5.0]
    execute %{
     CREATE TEXT SEARCH CONFIGURATION public.english ( COPY = pg_catalog.english );
     ALTER TEXT SEARCH CONFIGURATION public.english ALTER MAPPING
-    FOR hword, hword_part, word WITH unaccent, english_stem;
+    FOR asciiword, asciihword, hword_asciipart, hword, hword_part, english_stem;
   }
   end
 end
